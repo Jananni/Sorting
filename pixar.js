@@ -123,7 +123,6 @@ function sortMoviesByYear(movies) {
 function sortMoviesByTitle(movies) {
 
 	var min;
-	var temp;
 	for(var i = 0; i< movies.length-1; i++) //selection sort
 	{
 		min = i;
@@ -131,7 +130,7 @@ function sortMoviesByTitle(movies) {
 		{
 			if(movies[j].title < movies[min].title)
 			{
-				temp = movies[j];
+				var temp = movies[j];
 				movies[j] = movies[min];
 				movies[min] = temp;
 			}
