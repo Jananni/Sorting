@@ -96,16 +96,14 @@ function shuffle(o) {
 function sortMoviesByYear(movies) {
 
 	var min;
-	var temp;
 	for(var i = 0; i< movies.length-1; i++) //selection sort
 	{
 		min = i;
 		for(var j = i+1; j< movies.length; j++)
 		{
-			max = movies[j];
 			if(movies[j].year < movies[min].year)
 			{
-				temp = movies[j];
+				var temp = movies[j];
 				movies[j] = movies[min];
 				movies[min] = temp;
 			}
@@ -113,7 +111,6 @@ function sortMoviesByYear(movies) {
 	}
 	alert("You have to sort the movies by year!");
     return movies;
-    alert("hi");
 }
 
 /* sortMoviesByTitle
