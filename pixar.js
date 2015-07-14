@@ -113,6 +113,7 @@ function sortMoviesByYear(movies) {
 	}
 	alert("You have to sort the movies by year!");
     return movies;
+    alert("hi");
 }
 
 /* sortMoviesByTitle
