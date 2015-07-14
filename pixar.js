@@ -105,11 +105,10 @@ function sortMoviesByYear(movies) {
 			max = movies[j];
 			if(movies[j].year < movies[min].year)
 			{
-				min = j;
+				temp = movies[j];
+				movies[j] = movies[min];
+				movies[min] = temp;
 			}
-			temp = movies[i];
-			movies[i] = movies[min];
-			movies[min] = temp;
 		}
 	}
 	alert("You have to sort the movies by year!");
@@ -132,14 +131,12 @@ function sortMoviesByTitle(movies) {
 		min = i;
 		for(var j = i+1; j< movies.length; j++)
 		{
-			max = movies[j];
 			if(movies[j].title < movies[min].title)
 			{
-				min = j;
+				temp = movies[j];
+				movies[j] = movies[min];
+				movies[min] = temp;
 			}
-			temp = movies[i];
-			movies[i] = movies[min];
-			movies[min] = temp;
 		}
 	}
     alert("You have to sort the movies alphabetically!");
